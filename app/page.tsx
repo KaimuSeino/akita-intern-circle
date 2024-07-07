@@ -7,15 +7,17 @@ import LogoMarquee from "@/components/logo-marquee";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <section className="bg-[rgb(255,171.00000375,64.000002,1)] w-full p-4 flex flex-col justify-center items-center">
-        <h1 className="text-5xl font-bold text-white">秋田の学生へ</h1>
-        <div className="w-full z-50">
-          <div className="fixed left-0 top-0 flex w-full justify-end">
-            <div className="m-4 p-4 bg-red-500 flex justify-center items-center rounded-full w-10 h-10">
-              <Navbar />
-            </div>
-          </div>
+      <section className="bg-[#FFAB40] w-full p-4 flex flex-col justify-center items-center">
+        <div className="flex justify-start w-screen top-0 z-50">
+          <Image
+            src="/akita-intern-circle-logo1.png"
+            alt="akita-intern1"
+            width={200}
+            height={50}
+            className="p-2"
+          />
         </div>
+        <h1 className="text-5xl font-bold text-white">秋田の学生へ</h1>
         <Image
           src="/akita-intern-01.jpg"
           alt="akita-intern-01"
@@ -354,7 +356,7 @@ export default function Home() {
             />
           <div className="flex">
             <Image
-              src="/instagran.png"
+              src="/instagram1.png"
               alt="akita-intern-company"
               width={50}
               height={0}
