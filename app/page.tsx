@@ -7,7 +7,7 @@ import LogoMarquee from "@/components/logo-marquee";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <section className="bg-orange-400 w-full p-8 flex flex-col justify-center items-center">
+      <section className="bg-[rgb(255,171.00000375,64.000002,1)] w-full p-4 flex flex-col justify-center items-center">
         <h1 className="text-5xl font-bold text-white">秋田の学生へ</h1>
         <div className="w-full z-50">
           <div className="fixed left-0 top-0 flex w-full justify-end">
@@ -34,17 +34,23 @@ export default function Home() {
       </section>
 
 
-      <section className="w-full p-8 flex flex-col justify-center items-center">
-        <h3 className="text-xl font-bold">様々な業界の企業の協力のもと、メンバーば活躍しています。</h3>
+      <section className="w-full p-4 flex flex-col justify-center items-center">
+        <h3 className="text-xl font-bold text-center">様々な業界の企業の協力のもと、メンバーば活躍しています。</h3>
         {/* 企業のロゴ */}
-        <div className="py-8">
+        <div className="py-8 w-screen">
           <LogoMarquee />
         </div>
         {/* 画像挿入 250x250 */}
-        <div className="w-[250px] h-[250px] bg-slate-400 my-10">250x250</div>
+        <Image
+          src="/akita-intern-01.jpg"
+          alt="akita-intern-01"
+          width={350}
+          height={0}
+          className="my-10"
+        />
       </section>
 
-      <section className="w-full p-8 flex flex-col justify-center items-center border-b-2">
+      <section className="w-full p-4 flex flex-col justify-center items-center border-b-2">
         <h3 className="text-2xl font-bold">
           秋田インターンサークルで、<br />
           学生の<span className="text-orange-400">ガクチカ</span>作りと <br />
@@ -56,12 +62,12 @@ export default function Home() {
       </section>
 
       {/* 秋田インターンサークルでできること */}
-      <section className="w-full p-8 flex flex-col justify-center items-center">
-        <h3 className="text-4xl pt-4 font-bold">秋田インターンサークルができること</h3>
+      <section className="w-full p-4 flex flex-col justify-center items-center">
+        <h3 className="text-4xl pt-4 font-bold text-center">秋田インターンサークルができること</h3>
 
         <div className="flex flex-col items-center justify-center">
           <h4 className="text-3xl py-4 font-semibold">
-            <span className="text-orange-400 font-bold text-6xl">01</span>
+            <span className="text-[#FF9900] font-bold text-6xl">01</span>
               イベントの開催
           </h4>
           <p className="text-center">
@@ -70,12 +76,18 @@ export default function Home() {
             企画・実施<br />
           </p>
           {/* 画像挿入 250x250 */}
-          <div className="w-[350px] h-[250px] bg-slate-400 my-10">350x250</div>
+          <Image
+            src="/intern01.png"
+            alt="akita-intern-01"
+            width={350}
+            height={0}
+            className="my-10"
+          />
         </div>
 
         <div className="flex flex-col items-center justify-center">
           <h4 className="text-3xl py-4 font-semibold">
-            <span className="text-orange-400 font-bold text-6xl">02</span>
+            <span className="text-[#FF9900] font-bold text-6xl">02</span>
               インターン先の紹介
           </h4>
           <p className="text-center">
@@ -83,12 +95,18 @@ export default function Home() {
             最適なインターン先をご紹介<br />
           </p>
           {/* 画像挿入 250x250 */}
-          <div className="w-[350px] h-[250px] bg-slate-400 my-10">350x250</div>
+          <Image
+            src="/intern02.png"
+            alt="akita-intern-02"
+            width={350}
+            height={0}
+            className="my-10"
+          />
         </div>
 
         <div className="flex flex-col items-center justify-center">
           <h4 className="text-3xl py-4 font-semibold">
-            <span className="text-orange-400 font-bold text-6xl">03</span>
+            <span className="text-[#FF9900] font-bold text-6xl">03</span>
               就活をサポート
           </h4>
           <p className="text-center">
@@ -96,17 +114,31 @@ export default function Home() {
             サポート<br />
           </p>
           {/* 画像挿入 250x250 */}
-          <div className="w-[350px] h-[250px] bg-slate-400 my-10">350x250</div>
+          <Image
+            src="/intern03.png"
+            alt="akita-intern-03"
+            width={320}
+            height={0}
+            className="my-10"
+          />
         </div>
         
       </section>
       
-      <section className="w-full p-8 flex flex-col justify-center items-center gap-y-80">
+      <section className="w-full p-4 flex flex-col justify-center items-center gap-y-[250px]">
         <div className="relative">
-          <div className="w-[350px] h-[250px] bg-slate-400">350x250</div>
-          <div className="absolute w-[87%] top-[80%] left-[10%]">
-            <div className="border-2 bg-white w-[89%] p-2">
-              <p className="text-orange-400 font-bold text-6xl px-4">01</p>
+          <div className="w-screen">
+            <Image
+              src="/event01.jpg"
+              alt="akita-intern-event-01"
+              width={400}
+              height={0}
+              className="my-10"
+            />
+          </div>
+          <div className="absolute w-[95%] top-[80%] left-[4%]">
+            <div className="border-2 bg-white w-[96%] p-2 rounded-xl">
+              <p className="text-[#FF9900] font-bold text-6xl px-4">01</p>
               <h3 className="text-3xl p-2 font-bold">
                 学生が企業と連携して<span className="text-orange-400">イベント</span>を企画・運営
               </h3>
@@ -118,10 +150,18 @@ export default function Home() {
         </div>
 
         <div className="relative">
-          <div className="w-[350px] h-[250px] bg-slate-400">350x250</div>
-          <div className="absolute w-[90%] top-[80%] left-[10%]">
-            <div className="border-2 bg-white w-[89%] p-2">
-              <p className="text-orange-400 font-bold text-6xl px-4">02</p>
+          <div className="w-screen">
+            <Image
+              src="/event02.jpg"
+              alt="akita-intern-event-02"
+              width={400}
+              height={0}
+              className="my-10"
+            />
+          </div>
+          <div className="absolute w-[95%] top-[80%] left-[4%]">
+            <div className="border-2 bg-white w-[96%] p-2 rounded-xl">
+              <p className="text-[#FF9900] font-bold text-6xl px-4">02</p>
               <h3 className="text-3xl p-2 font-bold">
                 秋田で実践的な学びができる<span className="text-orange-400">インターン</span>先の紹介
               </h3>
@@ -132,11 +172,19 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative mt-8">
-          <div className="w-[350px] h-[250px] bg-slate-400">350x250</div>
-          <div className="absolute w-[90%] top-[80%] left-[10%]">
-            <div className="border-2 bg-white w-[89%] p-2">
-              <p className="text-orange-400 font-bold text-6xl px-4">03</p>
+        <div className="relative mt-16">
+          <div className="w-screen">
+            <Image
+              src="/event03.jpg"
+              alt="akita-intern-event-03"
+              width={400}
+              height={0}
+              className="my-10"
+            />
+          </div>
+          <div className="absolute w-[95%] top-[80%] left-[4%]">
+            <div className="border-2 bg-white w-[96%] p-2 rounded-xl">
+              <p className="text-[#FF9900] font-bold text-6xl px-4">03</p>
               <h3 className="text-3xl p-2 font-bold">
                 <span className="text-orange-400">キャリアアドバイザー</span>面談による就活支援
               </h3>
@@ -149,7 +197,7 @@ export default function Home() {
         
       </section>
 
-      <section className="w-full p-8 flex flex-col justify-center items-center mt-[340px]">
+      <section className="w-full p-4 flex flex-col justify-center items-center mt-[340px]">
         <h3 className="text-xl font-bold">スキルアップと活動を支援</h3>
         <h4 className="text-center font-bold text-2xl">
           学生インターンサークルの <br />
@@ -171,7 +219,14 @@ export default function Home() {
             </p>
             
           </div>
-          <div className="w-[100px] h-[70px] bg-slate-400 my-10">100x70</div>
+          {/* 画像挿入 */}
+          <Image
+            src="/learn.png"
+            alt="akita-intern-learn"
+            width={120}
+            height={0}
+            className="my-4"
+          />
         </div>
 
         <div className="mt-8 flex items-center gap-x-7 border-b-2 border-dashed">
@@ -191,11 +246,18 @@ export default function Home() {
             </p>
             
           </div>
-          <div className="w-[100px] h-[70px] bg-slate-400 my-10">100x70</div>
+          {/* 画像挿入 */}
+          <Image
+            src="/net.png"
+            alt="akita-intern-learn"
+            width={120}
+            height={0}
+            className="my-4"
+          />
         </div>
       </section>
 
-      <section className="w-full p-8 flex flex-col justify-center items-center mt-10">
+      <section className="w-full p-4 flex flex-col justify-center items-center mt-10 bg-[#F4F8F9]">
         <h3 className="text-xl font-bold text-center">
           秋田インターンサークルから、<br />
           知れる・成長できる
@@ -205,12 +267,22 @@ export default function Home() {
         </p>
 
         <div className="flex gap-x-4 mt-2">
-          <div className="w-[150px] h-[50px] bg-slate-400">150x50</div>
-          <div className="w-[150px] h-[50px] bg-slate-400">150x50</div>
+          <Image
+            src="/left-img.png"
+            alt="akita-intern-left-img"
+            width={175}
+            height={0}
+          />
+          <Image
+            src="/right-img.png"
+            alt="akita-intern-left-img"
+            width={175}
+            height={0}
+          />
         </div>
       </section>
       
-      <section className="w-full p-8 flex flex-col justify-center items-center">
+      <section className="w-full p-4 flex flex-col justify-center items-center">
         <h3 className="text-xl font-bold text-center">
           様々な業界の企業と協力して<br />
           秋田インターンサークルは<br />
@@ -218,14 +290,11 @@ export default function Home() {
         </h3>
         {/* 企業のロゴ */}
         <div className="py-8">
-          <div className="w-screen bg-slate-300">
-            <div className="w-[50px] h-[50px] bg-slate-400">50x50</div>
-            <div className="w-[50px] h-[50px] bg-slate-400">50x50</div>
-          </div>
+          <LogoMarquee />
         </div>
       </section>
 
-      <section className="bg-orange-400 w-full p-8 flex flex-col justify-center gap-4 items-center">
+      <section className="bg-orange-400 w-full p-4 flex flex-col justify-center gap-4 items-center">
         <h4 className="text-xl font-bold text-white text-center">
           秋田インターンサークルに<br />
           関してご不明な点ございましたら<br />
@@ -233,8 +302,13 @@ export default function Home() {
         </h4>
         {/* 画像挿入 250x250 */}
         <div className="w-[80%] bg-white my-10 flex flex-col justify-center items-center">
-          <div className="m-4 p-14 bg-orange-500 flex justify-center items-center rounded-full w-10 h-10">
-            <div className="w-[50px] h-[50px] bg-slate-400"> 50x50 </div>
+          <div className="m-4 p-2 bg-orange-500 flex justify-center items-center rounded-full w-20 h-20">
+            <Image
+              src="/white-img02.png"
+              alt="akita-intern-student"
+              width={50}
+              height={50}
+            />
           </div>
 
           <h4 className="text-3xl font-bold">学生の方へ</h4>
@@ -245,8 +319,13 @@ export default function Home() {
         </div>
 
         <div className="w-[80%] bg-white my-10 flex flex-col justify-center items-center">
-          <div className="m-4 p-14 bg-orange-500 flex justify-center items-center rounded-full w-10 h-10">
-            <div className="w-[50px] h-[50px] bg-slate-400"> 50x50 </div>
+          <div className="m-4 p-2 bg-orange-500 flex justify-center items-center rounded-full w-20 h-20">
+            <Image
+              src="/white-img03.png"
+              alt="akita-intern-company"
+              width={30}
+              height={50}
+            />
           </div>
 
           <h4 className="text-3xl font-bold">企業の方へ</h4>
@@ -257,7 +336,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full p-8 flex flex-col justify-center items-center">
+      <section className="w-full p-4 flex flex-col justify-center items-center">
         <div className="border-b-2 w-screen flex flex-col items-center gap-y-2 p-4">
           <p>ホーム</p>
           <p>私たちについて</p>
@@ -266,13 +345,29 @@ export default function Home() {
           <p>お問い合わせ</p>
         </div>
         <div>
-          <div className="w-[350px] h-[50px] bg-slate-400 my-4">250x250</div>
+            <Image
+              src="/akita-intern-circle-logo.png"
+              alt="akita-intern"
+              width={400}
+              height={50}
+              className="p-2"
+            />
           <div className="flex">
-            <div className="w-[50px] h-[50px] bg-slate-400">50x50</div>
-            <div className="w-[50px] h-[50px] bg-slate-400">50x50</div>
+            <Image
+              src="/instagran.png"
+              alt="akita-intern-company"
+              width={50}
+              height={0}
+            />
+            <Image
+              src="/x.png"
+              alt="akita-intern-company"
+              width={50}
+              height={0}
+            />
           </div>
         </div>
-        <p className="mt-4 text-sm font-sans text-slate-500">&copy;All Rights Reserved</p>
+        <p className="mt-4 text-sm font-sans text-slate-500">&copy;2023 Akita Intern Circle</p>
       </section>
       
     </main>
