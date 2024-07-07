@@ -40,21 +40,21 @@ export default function Home() {
 
 
       <section className="w-full p-4 flex flex-col justify-center items-center">
-        <h3 className="text-xl font-bold text-center">
+        <h3 className="text-xl font-bold text-center mt-4">
           様々な業界の企業の協力のもと <br />
-          メンバーば活躍しています。
+          メンバーは活躍しています。
         </h3>
         {/* 企業のロゴ */}
-        <div className="py-8 w-screen">
+        <div className="pt-8 w-screen">
           <LogoMarquee />
         </div>
       </section>
 
-      <section className="w-full p-4 flex flex-col justify-center items-center border-b-2">
+      <section className="w-full p-4 flex flex-col justify-center items-center">
         <h3 className="text-2xl font-bold">
           秋田インターンサークルで、<br />
-          学生の<span className="text-orange-400">ガクチカ</span>作りと <br />
-          情報提供による<span className="text-orange-400">キャリア構築</span>を実現します。
+          学生の<span className="text-[#FFAB40]">ガクチカ</span>作りと <br />
+          情報提供による<span className="text-[#FFAB40]">キャリア構築</span>を実現します。
         </h3>
         <p className="py-8 text-xl">
           将来のビジネス界を牽引する可能性を秘めた学生たちに向けて、成長のチャンスやキャリア構築に関する情報を提供します。面談を通じて選考プロセスのサポートや企業の紹介を行います。
@@ -62,15 +62,15 @@ export default function Home() {
       </section>
 
       {/* 秋田インターンサークルでできること */}
-      <section className="w-full p-4 flex flex-col justify-center items-center">
+      <section className="w-full px-4 pt-4 flex flex-col justify-center items-center bg-[#F7F7F8]">
         <h3 className="text-4xl pt-4 font-bold text-center">秋田インターンサークルができること</h3>
 
         <div className="flex flex-col items-center justify-center">
-          <h4 className="text-3xl py-4 font-semibold">
-            <span className="text-[#FF9900] font-bold text-6xl">01</span>
-              イベントの開催
+          <h4 className="text-3xl py-4 font-semibold flex items-center">
+            <span className="text-[#FF9900] font-bold text-6xl mr-4">01</span>
+            イベントの開催
           </h4>
-          <p className="text-center">
+          <p className="text-center text-xl">
             企業か抱える課題に<br />
             学生の視点を入れたイベントを<br />
             企画・実施<br />
@@ -86,11 +86,11 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <h4 className="text-3xl py-4 font-semibold">
-            <span className="text-[#FF9900] font-bold text-6xl">02</span>
+          <h4 className="text-3xl py-4 font-semibold flex items-center">
+            <span className="text-[#FF9900] font-bold text-6xl mr-2">02</span>
               インターン先の紹介
           </h4>
-          <p className="text-center">
+          <p className="text-center text-xl">
             キャリアのスタート地点として<br />
             最適なインターン先をご紹介<br />
           </p>
@@ -105,11 +105,11 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <h4 className="text-3xl py-4 font-semibold">
-            <span className="text-[#FF9900] font-bold text-6xl">03</span>
+          <h4 className="text-3xl py-4 font-semibold flex items-center">
+            <span className="text-[#FF9900] font-bold text-6xl mr-4">03</span>
               就活をサポート
           </h4>
-          <p className="text-center">
+          <p className="text-center text-xl">
             あなたの学びと成長を最大限<br />
             サポート<br />
           </p>
@@ -125,7 +125,7 @@ export default function Home() {
         
       </section>
       
-      <section className="w-full p-4 flex flex-col justify-center items-center gap-y-[250px]">
+      <section className="w-full px-4 flex flex-col justify-center items-center gap-y-[250px]">
         <div className="relative">
           <div className="w-screen">
             <Image
@@ -133,7 +133,7 @@ export default function Home() {
               alt="akita-intern-event-01"
               width={400}
               height={0}
-              className="my-10"
+              className="mb-10"
             />
           </div>
           <div className="absolute w-[95%] top-[80%] left-[4%]">
@@ -142,10 +142,10 @@ export default function Home() {
               <h3 className="text-3xl p-2 font-bold">
                 学生が企業と<br />
                 連携して
-                <span className="text-orange-400">イベント</span>を<br />
+                <span className="text-[#FFAB40]">イベント</span>を<br />
                 企画・運営
               </h3>
-              <p>
+              <p className="text-xl mt-4">
                 実際の企業が抱える課題に取り組み、学生の視点からの独自の解決策を考え、企業と協力してイベントを企画・実施。
               </p>
             </div>
@@ -166,9 +166,9 @@ export default function Home() {
             <div className="border-2 bg-white w-[96%] p-2 rounded-xl">
               <p className="text-[#FF9900] font-bold text-6xl px-4">02</p>
               <h3 className="text-3xl p-2 font-bold">
-                秋田で実践的な学びができる<span className="text-orange-400">インターン</span>先の紹介
+                秋田で実践的な学びができる<span className="text-[#FFAB40]">インターン</span>先の紹介
               </h3>
-              <p>
+              <p className="text-xl mt-4">
                 インターン生を募集している地域を支える様々な企業の情報をご紹介。実際のビジネスの現場での経験を積む貴重な機会となります。サークルメンバー限定のインターンの募集もあります。
               </p>
             </div>
@@ -189,10 +189,10 @@ export default function Home() {
             <div className="border-2 bg-white w-[96%] p-2 rounded-xl">
               <p className="text-[#FF9900] font-bold text-6xl px-4">03</p>
               <h3 className="text-3xl p-2 font-bold">
-                <span className="text-orange-400">キャリアアドバイザー</span>との面談実施による<br />
+                <span className="text-[#FFAB40]">キャリアアドバイザー</span>との面談実施による<br />
                 就活支援
               </h3>
-              <p>
+              <p className="text-xl mt-4">
                 秋田インターンサークルの経験を通じて築かれたネットワークを活用し、就活やあなたのやりたいことのサポートをします。学びと成長を様々な形で支援を行います。
               </p>
             </div>
@@ -210,7 +210,7 @@ export default function Home() {
         <div className="mt-8 flex items-center gap-x-2 border-b-2 border-dashed">
           <div className="font-bold text-xl flex flex-col gap-y-6">
             <h4>
-              <span className="text-orange-800 text-3xl">学べる</span>コンテンツ
+              <span className="text-[#B45F06] text-3xl">学べる</span>コンテンツ
             </h4>
             <p className="font-normal text-sm flex items-center justify-center">
               今後配信予定
@@ -230,7 +230,7 @@ export default function Home() {
         <div className="mt-8 flex items-center gap-x-7 border-b-2 border-dashed">
           <div className="font-bold text-xl flex flex-col gap-y-6">
             <h4>
-              <span className="text-orange-800 text-3xl">交流できる</span> <br />
+              <span className="text-[#B45F06] text-3xl">交流できる</span> <br />
               コンテンツ
             </h4>
             <p className="font-normal text-sm flex items-center justify-center">
@@ -275,25 +275,25 @@ export default function Home() {
       </section>
       
       <section className="w-full p-4 flex flex-col justify-center items-center">
-        <h3 className="text-xl font-bold text-center">
+        <h3 className="text-xl font-bold text-center mt-4">
           様々な業界の企業と協力して<br />
           秋田インターンサークルは<br />
           活動しています。
         </h3>
         {/* 企業のロゴ */}
-        <div className="py-8">
+        <div className="py-4">
           <LogoMarquee />
         </div>
       </section>
 
       <section className="bg-[#FFAB40] w-full p-4 flex flex-col justify-center gap-4 items-center">
-        <h4 className="text-xl font-bold text-white text-center">
+        <h4 className="text-xl font-bold text-white text-center mt-4">
           秋田インターンサークルに<br />
           関してご不明な点ございましたら<br />
           お気軽にお問い合わせください
         </h4>
         {/* 画像挿入 250x250 */}
-        <div className="w-[80%] bg-white my-5 flex flex-col justify-center items-center">
+        <div className="w-[80%] bg-white my-2 flex flex-col justify-center items-center py-4">
           <div className="m-4 p-2 bg-[#FFAB40] flex justify-center items-center rounded-full w-20 h-20">
             <Image
               src="/white-img02.png"
@@ -310,7 +310,7 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="w-[80%] bg-white my-5 flex flex-col justify-center items-center">
+        <div className="w-[80%] bg-white my-2 flex flex-col justify-center items-center py-4">
           <div className="m-4 p-2 bg-[#FFAB40] flex justify-center items-center rounded-full w-20 h-20">
             <Image
               src="/white-img03.png"
