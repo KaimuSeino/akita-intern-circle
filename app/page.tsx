@@ -7,49 +7,47 @@ import LogoMarquee from "@/components/logo-marquee";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <section className="bg-[#FFAB40] w-full p-4 flex flex-col justify-center items-center">
-        <div className="flex justify-start w-screen top-0 z-50">
+      <div className="flex justify-start w-screen top-0 z-50 bg-white">
           <Image
-            src="/akita-intern-circle-logo1.png"
+            src="/akita-intern-circle-logo.png"
             alt="akita-intern1"
-            width={200}
+            width={250}
             height={50}
             className="p-2"
           />
+      </div>
+      <section className="bg-[#FFAB40] w-full p-4 flex flex-col justify-center items-center">
+
+        <h1 className="text-5xl font-bold text-white mt-6">秋田の学生へ</h1>
+
+        <div className="w-screen">
+          <Image
+            src="/akita-intern-01.jpg"
+            alt="akita-intern-01"
+            width={400}
+            height={0}
+            className="my-10"
+          />
         </div>
-        <h1 className="text-5xl font-bold text-white">秋田の学生へ</h1>
-        <Image
-          src="/akita-intern-01.jpg"
-          alt="akita-intern-01"
-          width={350}
-          height={0}
-          className="my-10"
-        />
-        <div className="flex flex-col justify-center items-center gap-y-5">
-          <h2 className="text-white text-4xl font-bold text-center">
-            地方学生のポテンシャルを開放する
-          </h2>
-          <Button className="font-bold text-white w-[70%] bg-blue-400 h-12">
-            相談する
-          </Button>
-        </div>
+        <h2 className="text-white text-4xl font-bold text-center">
+          地方学生のポテンシャルを開放する
+        </h2>
+        <Button className="font-bold text-2xl text-white w-[70%] bg-blue-400 h-12 mt-6">
+          相談する
+        </Button>
+
       </section>
 
 
       <section className="w-full p-4 flex flex-col justify-center items-center">
-        <h3 className="text-xl font-bold text-center">様々な業界の企業の協力のもと、メンバーば活躍しています。</h3>
+        <h3 className="text-xl font-bold text-center">
+          様々な業界の企業の協力のもと <br />
+          メンバーば活躍しています。
+        </h3>
         {/* 企業のロゴ */}
         <div className="py-8 w-screen">
           <LogoMarquee />
         </div>
-        {/* 画像挿入 250x250 */}
-        <Image
-          src="/akita-intern-01.jpg"
-          alt="akita-intern-01"
-          width={350}
-          height={0}
-          className="my-10"
-        />
       </section>
 
       <section className="w-full p-4 flex flex-col justify-center items-center border-b-2">
@@ -142,7 +140,10 @@ export default function Home() {
             <div className="border-2 bg-white w-[96%] p-2 rounded-xl">
               <p className="text-[#FF9900] font-bold text-6xl px-4">01</p>
               <h3 className="text-3xl p-2 font-bold">
-                学生が企業と連携して<span className="text-orange-400">イベント</span>を企画・運営
+                学生が企業と<br />
+                連携して
+                <span className="text-orange-400">イベント</span>を<br />
+                企画・運営
               </h3>
               <p>
                 実際の企業が抱える課題に取り組み、学生の視点からの独自の解決策を考え、企業と協力してイベントを企画・実施。
@@ -188,7 +189,8 @@ export default function Home() {
             <div className="border-2 bg-white w-[96%] p-2 rounded-xl">
               <p className="text-[#FF9900] font-bold text-6xl px-4">03</p>
               <h3 className="text-3xl p-2 font-bold">
-                <span className="text-orange-400">キャリアアドバイザー</span>面談による就活支援
+                <span className="text-orange-400">キャリアアドバイザー</span>との面談実施による<br />
+                就活支援
               </h3>
               <p>
                 秋田インターンサークルの経験を通じて築かれたネットワークを活用し、就活やあなたのやりたいことのサポートをします。学びと成長を様々な形で支援を行います。
@@ -200,8 +202,8 @@ export default function Home() {
       </section>
 
       <section className="w-full p-4 flex flex-col justify-center items-center mt-[340px]">
-        <h3 className="text-xl font-bold">スキルアップと活動を支援</h3>
-        <h4 className="text-center font-bold text-2xl">
+        <h3 className="text-2xl font-bold">スキルアップと活動を支援</h3>
+        <h4 className="text-center font-bold text-3xl">
           学生インターンサークルの <br />
           サポートコンテンツ
         </h4>
@@ -210,13 +212,7 @@ export default function Home() {
             <h4>
               <span className="text-orange-800 text-3xl">学べる</span>コンテンツ
             </h4>
-            <p className="font-normal text-sm">
-              <Link 
-                href="#"
-                className="underline mr-4"
-              >
-                詳しく見る
-              </Link>
+            <p className="font-normal text-sm flex items-center justify-center">
               今後配信予定
             </p>
             
@@ -237,13 +233,7 @@ export default function Home() {
               <span className="text-orange-800 text-3xl">交流できる</span> <br />
               コンテンツ
             </h4>
-            <p className="font-normal text-sm">
-              <Link 
-                href="#"
-                className="underline mr-4"
-              >
-                詳しく見る
-              </Link>
+            <p className="font-normal text-sm flex items-center justify-center">
               今後配信予定
             </p>
             
@@ -260,8 +250,8 @@ export default function Home() {
       </section>
 
       <section className="w-full p-4 flex flex-col justify-center items-center mt-10 bg-[#F4F8F9]">
-        <h3 className="text-xl font-bold text-center">
-          秋田インターンサークルから、<br />
+        <h3 className="text-2xl font-bold text-center">
+          秋田インターンサークルなら<br />
           知れる・成長できる
         </h3>
         <p className="text-center text-[16px] my-4 text-slate-600">
@@ -296,15 +286,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-orange-400 w-full p-4 flex flex-col justify-center gap-4 items-center">
+      <section className="bg-[#FFAB40] w-full p-4 flex flex-col justify-center gap-4 items-center">
         <h4 className="text-xl font-bold text-white text-center">
           秋田インターンサークルに<br />
           関してご不明な点ございましたら<br />
           お気軽にお問い合わせください
         </h4>
         {/* 画像挿入 250x250 */}
-        <div className="w-[80%] bg-white my-10 flex flex-col justify-center items-center">
-          <div className="m-4 p-2 bg-orange-500 flex justify-center items-center rounded-full w-20 h-20">
+        <div className="w-[80%] bg-white my-5 flex flex-col justify-center items-center">
+          <div className="m-4 p-2 bg-[#FFAB40] flex justify-center items-center rounded-full w-20 h-20">
             <Image
               src="/white-img02.png"
               alt="akita-intern-student"
@@ -315,13 +305,13 @@ export default function Home() {
 
           <h4 className="text-3xl font-bold">学生の方へ</h4>
 
-          <Button className="font-bold text-white w-[70%] bg-blue-400 h-12 my-4">
+          <Button className="font-bold text-xl text-white w-[70%] bg-blue-400 h-12 my-4">
             相談する
           </Button>
         </div>
 
-        <div className="w-[80%] bg-white my-10 flex flex-col justify-center items-center">
-          <div className="m-4 p-2 bg-orange-500 flex justify-center items-center rounded-full w-20 h-20">
+        <div className="w-[80%] bg-white my-5 flex flex-col justify-center items-center">
+          <div className="m-4 p-2 bg-[#FFAB40] flex justify-center items-center rounded-full w-20 h-20">
             <Image
               src="/white-img03.png"
               alt="akita-intern-company"
@@ -332,7 +322,7 @@ export default function Home() {
 
           <h4 className="text-3xl font-bold">企業の方へ</h4>
 
-          <Button className="font-bold text-white w-[70%] bg-blue-400 h-12 my-4">
+          <Button className="font-bold text-xl text-white w-[70%] bg-blue-400 h-12 my-4">
             お問い合わせ
           </Button>
         </div>
