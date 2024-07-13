@@ -1,7 +1,7 @@
 const Career = () => {
     return (
         <section className="w-full p-4 flex flex-col justify-center items-center">
-            <h3 className="text-2xl font-bold">
+            <h3 className="mt-10 text-2xl font-bold md:text-4xl">
                 秋田インターンサークルで、
                 学生の<span className="text-[#FFAB40]">ガクチカ</span>作りと
                 情報提供による<span className="text-[#FFAB40]">キャリア構築</span>を実現します。

@@ -6,7 +6,7 @@ const Main = () => {
         <section className="bg-[#FFAB40] w-full p-4 flex flex-col md:flex-row justify-center items-center">
 
             <div className="flex flex-col justify-center items-center md:ml-20 w-full md:p-4">
-            <h1 className="text-5xl font-bold text-white mt-6 mb-4">秋田の学生へ</h1>
+            <h1 className="text-5xl font-bold text-white mt-6 mb-4 md:text-7xl">秋田の学生へ</h1>
             <h2 className="text-white text-4xl font-bold text-center">
                 地方学生のポテンシャルを開放する
             </h2>
