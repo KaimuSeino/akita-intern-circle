@@ -1,25 +1,19 @@
-"use client"
+"use client";
 
-import { useEffect } from 'react';
-import Image from 'next/image';
+import { useEffect } from "react";
+import Image from "next/image";
 
 const LogoMarquee = () => {
   useEffect(() => {
-    const slides = document.getElementsByClassName('slides');
-    
+    const slides = document.getElementsByClassName("slides");
+
     for (let i = 0; i < slides.length; ++i) {
-      // 対象ラッパー要素をHTMLDivElementにキャスト
       const target = slides[i] as HTMLElement;
-      // データ属性からdurationを取得
-      const duration = parseInt(target.dataset.duration || '10') * 1000 || 10000;
-      // スライダーの進行方向(右から左 or 左から右)
-      const isAlternate = target.classList.contains('alternate');
-      // 子要素の数を取得
+      const duration = parseInt(target.dataset.duration || "10") * 1000 || 10000;
+      const isAlternate = target.classList.contains("alternate");
       const childNum = target.firstElementChild?.children.length || 0;
-      // ロゴの幅を計算
-      const logoWidth = ((100 / childNum) * 100 / 100).toFixed(2);
-      // CSS変数にロゴの幅をセット
-      target.style.setProperty('--logo-width', `${logoWidth}%`);
+      const logoWidth = ((100 / childNum) * 100) / 100;
+      target.style.setProperty("--logo-width", `${logoWidth}%`);
 
       let startTime = 0;
       let elapsed = 0;
@@ -42,133 +36,35 @@ const LogoMarquee = () => {
         if (isAlternate) {
           target.style.transform = `translate3d(${ -50 + progress * 50 }%, 0, 0)`;
         } else {
-          target.style.transform = `translate3d(-${ progress * 50 }%, 0, 0)`;
+          target.style.transform = `translate3d(-${progress * 50}%, 0, 0)`;
         }
 
         window.requestAnimationFrame(loop);
-      }
+      };
 
       window.requestAnimationFrame(loop);
     }
   }, []);
 
   return (
-    <div className="slider-container">
-      <div className="slides" data-duration="10">
-        <div className="slide">
+    <div className="slider-container overflow-hidden">
+      <div className="slides flex w-[200%]" data-duration="10">
+        <div className="slide flex-basis-[50%] flex items-center relative h-full">
           <Image
-            src="/local-power.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/shimizugumi.jpg"
-            alt="akita-intern-01"
-            width={140}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/soshikinokochi.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/jegls.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/localquest.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/rlect.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/あるやうむ.webp"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/141andco.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
+            src="/companies-logo.png"
+            alt="company-logos"
+            width={1000}
+            height={10}
+            className="logo flex-basis-[var(--logo-width,12.5%)] transition-transform duration-300"
           />
         </div>
-        <div className="slide">
+        <div className="slide flex-basis-[50%] flex items-center relative h-full">
           <Image
-            src="/local-power.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/shimizugumi.jpg"
-            alt="akita-intern-01"
-            width={140}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/soshikinokochi.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/jegls.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/localquest.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/rlect.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/あるやうむ.webp"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
-          />
-          <Image
-            src="/141andco.jpg"
-            alt="akita-intern-01"
-            width={100}
-            height={100}
-            className="logo"
+            src="/companies-logo.png"
+            alt="company-logos"
+            width={1000}
+            height={10}
+            className="logo flex-basis-[var(--logo-width,12.5%)] transition-transform duration-300"
           />
         </div>
       </div>

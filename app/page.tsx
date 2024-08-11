@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LogoMarquee from "@/components/logo-marquee";
 import Main from "@/components/main";
 import CanDo from "@/components/can-do";
@@ -8,28 +7,24 @@ import Message from "@/components/message";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Career from "@/components/career";
-import Company from "@/components/company";
+import Header from "@/components/header";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <div className="flex justify-start w-screen top-0 z-50 bg-white">
-          <Image
-            src="/akita-intern-circle-logo.png"
-            alt="akita-intern1"
-            width={250}
-            height={50}
-            className="p-2"
-          />
-      </div>
+      {/* ヘッダー */}
+      <Header />
+
       {/* メイン */}
       <Main />
 
-      {/* 会社一覧 */}
-      <Company />
-
       {/* キャリア */}
       <Career />
+
+      {/* 企業ロゴ */}
+      <div className="pb-2 w-screen">
+          <LogoMarquee />
+      </div>
 
       {/* 秋田インターンサークルでできること */}
       <CanDo />

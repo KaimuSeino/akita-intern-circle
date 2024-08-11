@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <link rel="icon" href="/akita-intern-favicon.ico" sizes="any" />
+        <body className={inter.className}>
+          {children}
+        </body>
     </html>
   );
 }
