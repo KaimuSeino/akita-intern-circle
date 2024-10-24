@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Contact = () => {
     return (
@@ -22,8 +23,10 @@ const Contact = () => {
 
             <h4 className="text-3xl font-bold">学生の方へ</h4>
 
-            <Button className="font-bold text-xl text-white w-[70%] bg-blue-400 h-12 my-4">
-              相談する
+            <Button className="font-bold text-xl text-white w-[70%] bg-blue-400 hover:bg-blue-500 h-12 my-4">
+              <Link href='https://t.co/jbiLUdpbcq'>
+                相談する
+              </Link>
             </Button>
           </div>
 
@@ -39,8 +42,10 @@ const Contact = () => {
 
             <h4 className="text-3xl font-bold">企業の方へ</h4>
 
-            <Button className="font-bold text-xl text-white w-[70%] bg-blue-400 h-12 my-4">
-              お問い合わせ
+            <Button className="font-bold text-xl text-white w-[70%] bg-blue-400 hover:bg-blue-500 h-12 my-4">
+              <Link href='https://docs.google.com/forms/d/e/1FAIpQLSfD2pMX9ecAIAVn6nB8WEmsMgvGMm9sQM5bydoCOOAkHmNvSQ/viewform?usp=sf_link'>
+                お問い合わせ
+              </Link>
             </Button>
           </div>
         </div>
