@@ -1,8 +1,18 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Contact = () => {
+    const router = useRouter()
+    const handleLine = () => {
+        router.push("https://t.co/jbiLUdpbcq")
+    }
+    const handleContact = () => {
+        router.push("https://docs.google.com/forms/d/e/1FAIpQLSfD2pMX9ecAIAVn6nB8WEmsMgvGMm9sQM5bydoCOOAkHmNvSQ/viewform?usp=sf_link")
+    }
     return (
         <section className="bg-[#FFAB40] w-full p-4 flex flex-col justify-center gap-4 items-center">
         <h4 className="text-xl font-bold text-white text-center mt-4">
@@ -23,10 +33,11 @@ const Contact = () => {
 
             <h4 className="text-3xl font-bold">学生の方へ</h4>
 
-            <Button className="font-bold text-xl text-white w-[70%] bg-blue-400 hover:bg-blue-500 h-12 my-4">
-              <Link href='https://t.co/jbiLUdpbcq'>
-                相談する
-              </Link>
+            <Button
+              className="font-bold text-xl text-white w-[70%] bg-blue-400 hover:bg-blue-500 h-12 my-4"
+              onClick={handleLine}
+            >
+              相談する
             </Button>
           </div>
 
@@ -42,10 +53,11 @@ const Contact = () => {
 
             <h4 className="text-3xl font-bold">企業の方へ</h4>
 
-            <Button className="font-bold text-xl text-white w-[70%] bg-blue-400 hover:bg-blue-500 h-12 my-4">
-              <Link href='https://docs.google.com/forms/d/e/1FAIpQLSfD2pMX9ecAIAVn6nB8WEmsMgvGMm9sQM5bydoCOOAkHmNvSQ/viewform?usp=sf_link'>
-                お問い合わせ
-              </Link>
+            <Button
+              className="font-bold text-xl text-white w-[70%] bg-blue-400 hover:bg-blue-500 h-12 my-4"
+              onClick={handleContact}
+            >
+              お問い合わせ
             </Button>
           </div>
         </div>

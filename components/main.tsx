@@ -1,8 +1,14 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "./ui/button";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Main = () => {
+    const router = useRouter()
+    const handleLine = () => {
+        router.push("https://t.co/jbiLUdpbcq")
+    }
     return ( 
         <section className="bg-[#FFAB40] w-full p-4 flex flex-col md:flex-row justify-center items-center">
 
@@ -13,10 +19,11 @@ const Main = () => {
                 <h2 className="text-white text-xl font-semibold text-center mt-4">
                     就活を終えた先輩が自己分析やES添削など<br />就活を徹底サポートする就活支援団体
                 </h2>
-                <Button className="font-bold text-2xl text-white w-[70%] bg-blue-400 hover:bg-blue-500 h-12 mt-6 md:grid-cols-1">
-                    <Link href="https://t.co/jbiLUdpbcq">
-                        相談する
-                    </Link>
+                <Button
+                    className="font-bold text-2xl text-white w-[70%] bg-blue-400 hover:bg-blue-500 h-12 mt-6 md:grid-cols-1"
+                    onClick={handleLine}
+                >
+                    相談する
                 </Button>
             </div>
 
